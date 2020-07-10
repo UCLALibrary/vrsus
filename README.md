@@ -2,8 +2,6 @@
 ### [Inception deck](https://docs.library.ucla.edu/display/DEV/Build+Your+Own+Blacklight+%28BYOB%29+Inception+Deck) | [Product page](https://docs.library.ucla.edu/display/DEV/Ursus+v2)
 
 ## Project setup
-
-<details><summary>SETUP</summary>
   
 ```
 npm install
@@ -36,5 +34,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-<details>
