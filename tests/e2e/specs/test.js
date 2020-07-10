@@ -6,3 +6,10 @@ describe("My First Test", () => {
     cy.contains("h1", "Welcome to Your Vue.js + TypeScript App");
   });
 });
+
+describe("Visible navbar", () => {
+  it("Visits the app root url and the navbar is visible", () => {
+    cy.visit("/");
+    cy.contains("navbar", "About", "Give Us Feedback");
+  });
+});
