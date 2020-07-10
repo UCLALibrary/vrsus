@@ -1,6 +1,8 @@
 # vrsus
+### [Inception deck](https://docs.library.ucla.edu/display/DEV/Build+Your+Own+Blacklight+%28BYOB%29+Inception+Deck) | [Product page](https://docs.library.ucla.edu/display/DEV/Ursus+v2)
 
 ## Project setup
+  
 ```
 npm install
 ```
