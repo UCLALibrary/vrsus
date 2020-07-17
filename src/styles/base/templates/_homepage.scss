@@ -1,0 +1,32 @@
+.content-container--homepage {
+  padding-bottom: 4rem;
+}
+
+.homepage__subtitle {
+  // @extend .col-12;
+
+  font-size: $text-36;
+  font-weight: $font-bold;
+
+  @media (max-width: 767px) {
+    font-size: $text-28;
+  }
+}
+
+.homepage__text {
+  @extend .col-12;
+
+  font-size: $text-18;
+
+  @media (max-width: 991px) {
+    font-size: $text-16;
+  }
+}
+
+.homepage-grid {
+  @extend .col-12;
+}
+
+.homepage-grid__row {
+  @extend .row;
+}

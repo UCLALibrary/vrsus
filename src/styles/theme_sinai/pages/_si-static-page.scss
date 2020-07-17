@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,600&display=swap');
+
+.static-page__row--sinai {
+  @extend .row;
+}
+
+.static-page__title--sinai {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.static-page__subtitle--sinai {
+  margin-bottom: 1.25rem;
+}
+
+.static-page__text--sinai {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.static-page__list--sinai {
+  margin-bottom: 1rem;
+
+  @media (max-width: 767px) {
+    font-size: $text-16;
+  }
+}
+
+.static-page__block--sinai {
+  @extend .col-12;
+  @extend .col-md-6;
+
+  @media (max-width: 767px) {
+    &:nth-child(even) {
+      margin-top: 1.5rem;
+    }
+  }
+}

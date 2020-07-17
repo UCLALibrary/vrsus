@@ -1,0 +1,40 @@
+.facet-values {
+  color: $ucla-darker-blue;
+
+  li {
+    color: $ucla-darker-blue;
+  }
+}
+
+.facet-label {
+  a,
+  a:active,
+  a:visited {
+    color: $ucla-darker-blue;
+  }
+}
+
+// Controls background of A-Z & Numerical sort buttons when active
+.modal-btn--ursus {
+  color: $ucla-darker-blue;
+  border-color: $gray-10;
+
+  &:hover {
+    color: $white;
+    background-color: $ucla-darker-blue;
+  }
+}
+
+.active.modal-btn--ursus {
+  color: $ucla-darker-blue;
+  background-color: $gray-10;
+}
+
+// Prev | Next
+.modal-pagination__page-item--ursus {
+  @extend .page-item;
+
+  &:hover {
+    background-color: $ucla-darkest-blue;
+  }
+}

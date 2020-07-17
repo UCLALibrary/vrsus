@@ -1,0 +1,40 @@
+.site-footer__primary--sinai {
+  background-color: $sinai-beige;
+}
+
+.site-footer__primary-wrapper--sinai {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.site-footer__logo-wrapper--sinai {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 19%;
+
+  @media (max-width: 767px) {
+    flex: 0 0 33%;
+    display: flex;
+    justify-content: center;
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.site-footer__logo--sinai {
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}

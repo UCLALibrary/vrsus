@@ -1,0 +1,17 @@
+.lead__row {
+  margin-bottom: 2rem;
+}
+
+.lead__text--homepage {
+  padding-bottom: 2rem;
+  font-size: $text-24;
+  font-weight: $font-light;
+
+  @media (max-width: 767px) {
+    font-size: $text-20;
+  }
+
+  @media (max-width: 575px) {
+    font-size: $text-18;
+  }
+}
