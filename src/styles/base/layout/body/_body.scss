@@ -1,0 +1,37 @@
+.site-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-full {
+  padding: 0 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 3.25rem;
+  }
+}
+
+// This container allows the site navbar dropdown menu to span full width without a break in background color.
+@media (max-width: 991px) {
+  .container-full--navbar {
+    padding: 0;
+  }
+}
+
+.container-constrained {
+  @extend .container;
+}
+
+.main-content-container {
+  margin-top: 4.25rem;
+  margin-bottom: 4.25rem;
+
+  @media (max-width: 767px) {
+    margin-top: 3.25rem;
+    margin-bottom: 3.25rem;
+  }
+}

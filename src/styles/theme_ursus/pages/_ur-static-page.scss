@@ -1,0 +1,17 @@
+.static-page__row--ursus {
+  @extend .row;
+}
+
+.static-page__subtitle--ursus {
+  @extend .col-lg-4;
+}
+
+.static-page__text--ursus {
+  @extend .col-lg-8;
+}
+
+.static-page__list--ursus {
+  @media (max-width: 991px) {
+    font-size: $text-16;
+  }
+}

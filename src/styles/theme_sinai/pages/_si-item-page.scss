@@ -1,0 +1,27 @@
+.item-page__secondary-metadata--sinai {
+  @extend .col-lg-5;
+
+  background-color: $sinai-beige;
+}
+
+.item-page__pagination-widgets--sinai {
+  .previous {
+    color: $sinai-red;
+
+    &:hover {
+      color: $sinai-lighter-red;
+    }
+
+    &:not(a) {
+      color: $gray-60;
+    }
+  }
+
+  .next {
+    color: $sinai-red;
+
+    &:hover {
+      color: $sinai-lighter-red;
+    }
+  }
+}

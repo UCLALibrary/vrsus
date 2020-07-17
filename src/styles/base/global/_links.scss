@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  color: $gray-80;
+}
+
+a:visited {
+  text-decoration: none;
+  color: $gray-80;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $gray-60;
+}
+
+a:active {
+  text-decoration: none;
+  color: $gray-80;
+}

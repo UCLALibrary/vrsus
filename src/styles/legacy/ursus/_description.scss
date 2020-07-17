@@ -1,0 +1,22 @@
+.view-more {
+  @extend a;
+  cursor: pointer;
+}
+
+.down-arrow {
+  transform: rotate(-270deg);
+  display: inline-block;
+}
+
+.up-arrow {
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+
+.description {
+  width: 75%;
+}
+
+.description-full {
+  width: 75%;
+}

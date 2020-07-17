@@ -1,0 +1,36 @@
+.site-footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-top: auto;
+}
+
+.site-footer__logo {
+  width: 100%;
+}
+
+.site-footer__list {
+  list-style-type: none;
+}
+
+.site-footer__list-item {
+  margin-left: 0;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.site-footer__link {
+  color: $white;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    color: $gray-80;
+  }
+
+  &:active {
+    color: $white;
+  }
+}

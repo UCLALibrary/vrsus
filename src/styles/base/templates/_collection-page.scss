@@ -1,0 +1,19 @@
+.content-container--collection-page {
+  @extend .col;
+
+  padding-bottom: 4rem;
+}
+
+.collection-page__text {
+  @extend .col-12;
+
+  font-size: $text-18;
+
+  @media (max-width: 991px) {
+    font-size: $text-16;
+  }
+}
+
+.collection-page__btn-row {
+  margin-top: 5rem;
+}

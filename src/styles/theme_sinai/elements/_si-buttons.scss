@@ -1,0 +1,59 @@
+.btn-sinai--red {
+  color: $white;
+  background-color: $sinai-red;
+  border-color: $sinai-red;
+}
+
+.btn-outline-sinai--red {
+  color: $gray-80;
+  border-color: $sinai-red;
+}
+
+.btn-outline-sinai--red:hover {
+  color: $white;
+  background-color: $sinai-red;
+  border-color: $sinai-red;
+
+  .blacklight-icons svg g,
+  .blacklight-icons svg path {
+    stroke: $white;
+  }
+}
+
+.btn-outline-sinai--white {
+  color: $white;
+  border-color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-sinai--red:not(:disabled):not(.disabled).active {
+  color: $white;
+  background-color: $sinai-red;
+  border-color: $sinai-red;
+
+  .blacklight-icons svg g,
+  .blacklight-icons svg path {
+    stroke: $white;
+  }
+}
+
+.btn-base--base--sinai {
+  color: $sinai-red;
+  background-color: $white;
+  border-color: $sinai-red;
+
+  &:visited {
+    color: $sinai-red;
+    background-color: $white;
+    border-color: $sinai-red;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $sinai-red;
+  }
+}
