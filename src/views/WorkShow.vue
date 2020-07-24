@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Work show Page for {{ data.attributes.title_tesim.attributes.value }}</h1>
+    <h1>
+      Work show Page for {{ data.attributes.title_tesim.attributes.value }}
+    </h1>
     <table>
       <tr v-for="record in data.attributes" :key="record.id">
         <td>{{ record.attributes.label }}</td>
