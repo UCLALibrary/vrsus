@@ -11,7 +11,7 @@
               target="_blank"
               rel="noopener"
               ><img
-                src="logo/ucla-library-logo.svg"
+                src="../assets/ucla-library-logo.svg"
                 class="site-footer__logo site-footer__logo--ursus"
                 alt="UCLA Library Logo"
             /></a>
