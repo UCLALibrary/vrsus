@@ -2,9 +2,9 @@
   <ul>
     Search Results Here
     <li v-for="result in results.data" :key="result.id">
-      <router-link
-        :to="{ name: 'WorkShow', params: { ark: ark(result.id) } }"
-      >{{ result.type[0] }} {{ ark(result.id) }}</router-link>
+      <router-link :to="{ name: 'WorkShow', params: { ark: ark(result.id) } }"
+        >{{ result.type[0] }} {{ ark(result.id) }}</router-link
+      >
     </li>
   </ul>
 </template>
