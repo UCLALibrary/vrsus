@@ -1,14 +1,17 @@
 <template>
   <div>
     <h1>
-      Work show Page for {{ data.attributes.title_tesim.attributes.value }}
+      Work Show Page
+      Work show Page for {{ data.attributes }}
     </h1>
+    <!--
     <table>
       <tr v-for="record in data.attributes" :key="record.id">
         <td>{{ record.attributes.label }}</td>
         <td>{{ record.attributes.value }}</td>
       </tr>
     </table>
+    -->
   </div>
 </template>
 
@@ -27,6 +30,7 @@ export default {
     APIService.getItem(this.$route.params.ark)
       .then(response => {
         this.data = response.data.data;
+        console.log('We are looking for a response')
       })
       .catch(error => {
         console.log("Error:" + error.response);
