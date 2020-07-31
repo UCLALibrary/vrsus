@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>|
-      <router-link to="/catalog">Search</router-link>
-    </div>
     <Header />
     <router-view />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/catalog">Search</router-link>
+    </div>
     <Footer />
   </div>
 </template>
@@ -19,7 +19,6 @@ export default {
   components: {
     Header,
     Footer
-    
   }
 };
 </script>
