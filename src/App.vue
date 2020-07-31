@@ -5,23 +5,21 @@
       <router-link to="/about">About</router-link>|
       <router-link to="/catalog">Search</router-link>
     </div>
-    <Nav />
-    <Search />
+    <Header />
     <router-view />
     <Footer />
   </div>
 </template>
 <script>
 // @ is an alias to /src
-import Nav from "@/components/Nav.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
-import Search from "@/components/Search.vue";
 
 export default {
   components: {
-    Nav,
-    Footer,
-    Search
+    Header,
+    Footer
+    
   }
 };
 </script>
