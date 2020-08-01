@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: `https://digital.library.ucla.edu`,
+  baseURL: `https://ursus-dev.library.ucla.edu`,
   withCredentials: false, // This is the default
   headers: {
     Accept: "application/json",
