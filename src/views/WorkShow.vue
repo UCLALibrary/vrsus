@@ -4,7 +4,7 @@
       Work Show Page VUE
       <!-- Work show Page for {{ data.attributes }} -->
     </h1>
-    <MetadataSection :fields="primaryMetadata" />
+    <MetadataSection :fields="itemOverview" />
 
     <table>
       <tr v-for="record in data.attributes" :key="record.id">
@@ -19,6 +19,10 @@
 /* eslint-disable */
 import APIService from "@/services/APIService.js";
 import MetadataSection from "@/components/MetadataSection.vue";
+const unpackMetadata = function (response, fields) {
+  metadata = [];
+  fields.forEach(field => console.log(field));
+}
 export default {
   name: "WorkShow",
   components: {
@@ -26,19 +30,37 @@ export default {
   },
   data() {
     return {
-      data: {}
+      data: {},
+      itemOverview: {}
     };
-  },
-  computed: {
-    primaryMetadata: function() {
-      console.log("Hi"); return [ ['key1', 'value1'] ]
-    }
   },
   created() {
     APIService.getItem(this.$route.params.ark)
       .then(response => {
         this.data = response.data.data;
-        console.log("We are looking for a response");
+        item_overview_fields = [
+          ['TITLE', 'title_tesim'],
+          ['ALTERNATIVE TITLE', 'alternative_title_tesim'],
+          ['UNIFORM TITLE', 'uniform_title_tesim'],
+          ['CREATOR', 'creator_tesim'],
+          ['AUTHOR', 'author_tesim'],
+          ['ARCHITECT', 'architect_tesim'],
+          ['PHOTOGRAPHER', 'photographer_tesim'],
+          ['COMPOSER', 'composer_tesim'],
+          ['SCRIBE', 'scribe_tesim'],
+          ['ILLUMINATOR', 'illuminator_tesim'],
+          ['RUBRICATOR', 'rubricator_tesim'],
+          ['LYRICIST', 'lyricist_tesim'],
+          ['PUBLISHER', 'publisher_tesim'],
+          ['PLACE OF ORIGIN', 'place_of_origin_tesim'],
+          ['YEAR', 'year_isim'],
+          ['DATE', 'normalized_date_sim'],
+          ['DATE CREATED', 'date_created_tesim'],
+          ['LANGUAGE', 'human_readable_language_tesim'],
+          ['COLLECTION', 'member_of_collections_ssim'],
+          ['COLLECTION (NATIVE)', 'dlcs_collection_name_tesim']
+        ];
+        this.itemOverview = unpackMetadata(response, item_overview_fields);
       })
       .catch(error => {
         console.log("Error:" + error.response);
