@@ -5,14 +5,15 @@
       <!-- Work show Page for {{ data.attributes }} -->
     </h1>
     <MetadataSection :fields="itemOverview" />
-  <!--
+    <!-- 
     <table>
       <tr v-for="record in data.attributes" :key="record.id">
         <td>{{ record.attributes.label }}</td>
         <td>{{ record.attributes.value }}</td>
       </tr>
     </table>
-  -->
+    -->
+  
   </div>
 </template>
 
@@ -21,44 +22,18 @@
 import APIService from "@/services/APIService.js";
 import MetadataSection from "@/components/MetadataSection.vue";
 const unpackMetadata = function(response, fields) {
-  ///let metadata = [];
-  ///alert(typeof(fields));
-  ///metadataKeys = Object.keys(response.data.data.attributes);
-  ///alert(response.data.data.attributes)
-  alert(Array.from(response.data.data.attributes))
+  let metadataDisplay = [];
+  let metadataKeys = Object.keys(response.data.data.attributes);
+  let metadataKeysValues = Object.entries(response.data.data.attributes);
+
   let itemOverviewFields_Keys = Object.keys(fields);
-  const metadata = Array.from(response.data.data.attributes).filter(
-    function(entry) {
-      ///alert(entry)
-      return itemOverviewFields_Keys.includes(entry['key']);
-    });
-    ///entry => entry.includes(entry.key));
-  return metadata;
-
-console.log(filtered);
-  
-  // function filterByKeys(item) {
-  //   if (Number.isFinite(item.id) && item.id !== 0) {
-  //     return true
-  //   } 
-  //   invalidEntries++
-  //   return false;
-  // }
-  // let arrByKeys = arr.filter(filterByKeys)
-  // return arrByKeys;
-
-  ///fields.forEach(field => {
-    ///console.log(field);
-    ///let metadataValue =
-      ///"response.data.data.attributes." + field[1] + ".attributes.value";
-
-///if (response.data.data.attributes.field[1].attributes.value) {
-      ///metadata.push({ label: field[0], value: mValue });
-      ///console.log(metadataValue)
-      ///metadata.push(metadataValue)
-    ///}
-  ///});
-  
+  const metadata = metadataKeys.filter(value => itemOverviewFields_Keys.includes(value));
+  metadataKeysValues.forEach(element =>  {if (metadata.includes(element[0]))
+    ///console.log(element[1].attributes.label);
+    metadataDisplay.push([element[1].attributes.label, element[1].attributes.value]);
+  }
+  );
+  return metadataDisplay; 
 };
 export default {
   name: "WorkShow",
@@ -102,7 +77,7 @@ export default {
         human_readable_language_tesim: 'Language',
         member_of_collections_ssim: 'Collection'
       };
-      this.itemOverview = unpackMetadata(JSON.parse(response), item_overview_fields);
+      this.itemOverview = unpackMetadata(response, item_overview_fields);
     });
     ///.catch(error => {
     ///  console.log("Error:" + error.response);
