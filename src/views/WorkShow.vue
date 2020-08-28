@@ -27,8 +27,8 @@ const unpackMetadata = function(response, fields) {
   let metadataKeysValues = Object.entries(response.data.data.attributes);
   let itemOverviewFields_Keys = Object.keys(fields);
   metadataKeysValues.forEach(element =>  {if (itemOverviewFields_Keys.includes(element[0]))
-    metadataDisplay.push([element[1].attributes.label, element[1].attributes.value]);
-  }
+    metadataDisplay.push([fields[element[0]], element[1].attributes.value]);
+    }
   );
   return metadataDisplay; 
 };
