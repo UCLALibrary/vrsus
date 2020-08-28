@@ -4,12 +4,12 @@
       Work Show Page VUE
       <!-- Work show Page for {{ data.attributes }} -->
     </h1>
-    <MetadataSection :fields="itemOverview" label="Item Overview" />
-    <MetadataSection :fields="notes" label="Notes" />
-    <MetadataSection :fields="physical_description" label="Physical Description" />
-    <MetadataSection :fields="keywords" label="Keywords" />
-    <MetadataSection :fields="localInfo" label="Find This Item" />
-    <MetadataSection :fields="accessCondition" label="Access Condition" />
+    <MetadataSection :fields="itemOverview" label="Item Overview" test="test" />
+    <MetadataSection :fields="notes" label="Notes" primary="test" />
+    <MetadataSection :fields="physical_description" label="Physical Description" primary="test" />
+    <MetadataSection :fields="keywords" label="Keywords" primary="test" />
+    <MetadataSection :fields="localInfo" label="Find This Item" primary="test" />
+    <MetadataSection :fields="accessCondition" label="Access Condition" primary="puppy" />
 
     <!-- 
     <table>

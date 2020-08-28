@@ -1,8 +1,13 @@
 <template>
   <div
     class="metadata-block"
-    v-bind:class="[ isPrimary ? item-page__primary-metadata : item-page__secondary-metadata ]"
+    :class=" test == 'test' ? 'item-page__primary-metadata' : 'item-page__secondary-metadata' "
   >
+    <h1>
+      heelo
+      {{ test }}
+    </h1>
+    <!--   -->
     <h4 class="metadata-block__title">{{ label }}</h4>
 
     <div v-for="field in fields" :key="field[0]">
@@ -30,9 +35,7 @@ export default {
   props: ["fields", "label"],
   data() {
     return {
-      data: {
-        isPrimary: false
-      }
+      data: {}
     };
   }
 };
