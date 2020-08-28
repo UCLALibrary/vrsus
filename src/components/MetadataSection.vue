@@ -1,6 +1,9 @@
 <template>
-  <div class="metadata-block">
-    <h4 class="metadata-block__title">Item Overview</h4>
+  <div
+    class="metadata-block"
+    v-bind:class="[ isPrimary ? item-page__primary-metadata : item-page__secondary-metadata ]"
+  >
+    <h4 class="metadata-block__title">{{ label }}</h4>
 
     <div v-for="field in fields" :key="field[0]">
       <dl class="metadata-block__group">
@@ -11,9 +14,8 @@
         <!-- VALUE -->
         <dd
           class="metadata-block__label-value metadata-block__label-value--ursus"
-        >
-          {{ field[1] }}
-        </dd>
+          v-html="field[1]"
+        ></dd>
       </dl>
     </div>
     <hr class="divider divider--ursus" />
@@ -25,6 +27,13 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 export default {
   name: "MetadataSection",
-  props: ["fields"]
+  props: ["fields", "label"],
+  data() {
+    return {
+      data: {
+        isPrimary: false
+      }
+    };
+  }
 };
 </script>
