@@ -21,15 +21,12 @@
 /* eslint-disable */
 import APIService from "@/services/APIService.js";
 import MetadataSection from "@/components/MetadataSection.vue";
+
 const unpackMetadata = function(response, fields) {
   let metadataDisplay = [];
-  let metadataKeys = Object.keys(response.data.data.attributes);
   let metadataKeysValues = Object.entries(response.data.data.attributes);
-
   let itemOverviewFields_Keys = Object.keys(fields);
-  const metadata = metadataKeys.filter(value => itemOverviewFields_Keys.includes(value));
-  metadataKeysValues.forEach(element =>  {if (metadata.includes(element[0]))
-    ///console.log(element[1].attributes.label);
+  metadataKeysValues.forEach(element =>  {if (itemOverviewFields_Keys.includes(element[0]))
     metadataDisplay.push([element[1].attributes.label, element[1].attributes.value]);
   }
   );
