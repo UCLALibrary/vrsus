@@ -4,13 +4,12 @@
       Work Show Page VUE
       <!-- Work show Page for {{ data.attributes }} -->
     </h1>
-    <MetadataSection :fields="itemOverview" label="Item Overview" test="test" />
-    <MetadataSection :fields="notes" label="Notes" primary="test" />
-    <MetadataSection :fields="physical_description" label="Physical Description" primary="test" />
-    <MetadataSection :fields="keywords" label="Keywords" primary="test" />
-    <MetadataSection :fields="localInfo" label="Find This Item" primary="test" />
-    <MetadataSection :fields="accessCondition" label="Access Condition" primary="puppy" />
-
+    <MetadataSection :fields="itemOverview" label="Item Overview" primary />
+    <MetadataSection :fields="notes" label="Notes" primary />
+    <MetadataSection :fields="physical_description" label="Physical Description" primary />
+    <MetadataSection :fields="keywords" label="Keywords" primary />
+    <MetadataSection :fields="localInfo" label="Find This Item" />
+    <MetadataSection :fields="accessCondition" label="Access Condition" />
     <!-- 
     <table>
       <tr v-for="record in data.attributes" :key="record.id">

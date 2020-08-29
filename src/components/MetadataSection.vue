@@ -1,13 +1,8 @@
 <template>
   <div
     class="metadata-block"
-    :class=" test == 'test' ? 'item-page__primary-metadata' : 'item-page__secondary-metadata' "
+    :class=" primary ? 'item-page__primary-metadata' : 'item-page__secondary-metadata item-page__secondary-metadata--ursus' "
   >
-    <h1>
-      heelo
-      {{ test }}
-    </h1>
-    <!--   -->
     <h4 class="metadata-block__title">{{ label }}</h4>
 
     <div v-for="field in fields" :key="field[0]">
@@ -32,7 +27,11 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 export default {
   name: "MetadataSection",
-  props: ["fields", "label"],
+  props: {
+    primary: Boolean,
+    label: String,
+    fields: Array
+  },
   data() {
     return {
       data: {}
