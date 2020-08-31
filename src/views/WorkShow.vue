@@ -1,25 +1,44 @@
 <template>
   <div>
+    <div style="background: #ccc" class="media-viewer-container">
+      <h1>UNIVERSAL VIEWER</h1>
+      <h2>
+        app/controllers/catalog_controller.rb --> config.show.partials.insert(2,
+        :media_viewer)
+      </h2>
+      <!-- <% iiif_service = IiifService.new %> -->
+      <iframe
+        class="media-viewer-iframe"
+        width="924px"
+        height="668px"
+        id="media-viewer-iframe"
+        allowfullscreen
+        frameborder="0"
+      >
+      </iframe>
+    </div>
+
     <h1>
       Work Show Page VUE
       <!-- Work show Page for {{ data.attributes }} -->
     </h1>
-    <div class="item-page__primary-metadata">
-      <MetadataSection :fields="itemOverview" label="Item Overview" />
-      <MetadataSection :fields="notes" label="Notes" />
-      <MetadataSection
-        :fields="physical_description"
-        label="Physical Description"
-      />
-      <MetadataSection :fields="keywords" label="Keywords" />
+    <div class="item-page__metadata-wrapper">
+      <div class="item-page__primary-metadata">
+        <MetadataSection :fields="itemOverview" label="Item Overview" />
+        <MetadataSection :fields="notes" label="Notes" />
+        <MetadataSection
+          :fields="physical_description"
+          label="Physical Description"
+        />
+        <MetadataSection :fields="keywords" label="Keywords" />
+      </div>
+      <div
+        class="item-page__secondary-metadata item-page__secondary-metadata--ursus"
+      >
+        <MetadataSection :fields="localInfo" label="Find This Item" />
+        <MetadataSection :fields="accessCondition" label="Access Condition" />
+      </div>
     </div>
-    <div
-      class="item-page__secondary-metadata item-page__secondary-metadata--ursus"
-    >
-      <MetadataSection :fields="localInfo" label="Find This Item" />
-      <MetadataSection :fields="accessCondition" label="Access Condition" />
-    </div>
-
     <!-- 
     <table>
       <tr v-for="record in data.attributes" :key="record.id">
