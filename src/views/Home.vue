@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Wsdjgfk;ahskdljf Vue.js App" />
+    <HelloWorld />
+    <a href="/catalog">ITEM - SHOW PAGE - /catalog</a>
   </div>
 </template>
 

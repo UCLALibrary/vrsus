@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <Header />
-    <router-view />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/catalog">Search</router-link>
+    <div class="site-container">
+      <Header />
+      <router-view />
+      <main class="main-content-container container-constrained">
+        <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link> |
+          <router-link to="/catalog">Search</router-link>
+        </div>
+      </main>
+      <Footer />
     </div>
-    <Footer />
   </div>
 </template>
+
 <script>
 // @ is an alias to /src
 import Header from "@/components/Header.vue";
@@ -22,6 +27,7 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
 @import "styles/legacy/old_blacklight";
 // @import "styles/slider";
