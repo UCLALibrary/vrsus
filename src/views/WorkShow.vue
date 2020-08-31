@@ -4,12 +4,21 @@
       Work Show Page VUE
       <!-- Work show Page for {{ data.attributes }} -->
     </h1>
-    <MetadataSection :fields="itemOverview" label="Item Overview" />
-    <MetadataSection :fields="notes" label="Notes" />
-    <MetadataSection :fields="physical_description" label="Physical Description" />
-    <MetadataSection :fields="keywords" label="Keywords" />
-    <MetadataSection :fields="localInfo" label="Find This Item" />
-    <MetadataSection :fields="accessCondition" label="Access Condition" />
+    <div class="item-page__primary-metadata">
+      <MetadataSection :fields="itemOverview" label="Item Overview" />
+      <MetadataSection :fields="notes" label="Notes" />
+      <MetadataSection
+        :fields="physical_description"
+        label="Physical Description"
+      />
+      <MetadataSection :fields="keywords" label="Keywords" />
+    </div>
+    <div
+      class="item-page__secondary-metadata item-page__secondary-metadata--ursus"
+    >
+      <MetadataSection :fields="localInfo" label="Find This Item" />
+      <MetadataSection :fields="accessCondition" label="Access Condition" />
+    </div>
 
     <!-- 
     <table>
@@ -35,7 +44,8 @@ const unpackMetadata = function(response, fields) {
     if (itemOverviewFields_Keys.includes(element[0]))
       metadataDisplay.push([fields[element[0]], element[1].attributes.value]);
   });
-  return metadataDisplay;
+console.log("PUPPY!", metadataDisplay);
+return metadataDisplay;
 };
 export default {
   name: "WorkShow",
